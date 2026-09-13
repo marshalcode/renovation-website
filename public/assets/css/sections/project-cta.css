@@ -1,0 +1,78 @@
+.project-cta {
+  padding-block: var(--space-12);
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+}
+
+.project-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.project-cta__content {
+  max-width: 42rem;
+}
+
+.project-cta__eyebrow {
+  margin: 0 0 var(--space-2);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-cta__title {
+  margin: 0;
+  color: var(--color-on-dark);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.project-cta__description {
+  margin: var(--space-4) 0 0;
+  color: rgb(255 255 255 / 72%);
+  line-height: 1.65;
+}
+
+.project-cta__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex: 0 0 auto;
+}
+
+.project-cta__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-on-dark);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+@media (max-width: 60rem) {
+  .project-cta__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 40rem) {
+  .project-cta__actions {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .project-cta__actions .button {
+    width: 100%;
+  }
+
+  .project-cta__phone {
+    justify-content: center;
+  }
+}

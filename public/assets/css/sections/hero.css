@@ -1,0 +1,152 @@
+.hero {
+  --hero-shade-strong: 0.62;
+  --hero-shade-light: 0.06;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--color-on-dark);
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero__inner {
+  position: relative;
+  min-height: 39rem;
+  padding-block:
+    clamp(9rem, 11vw, 11rem)
+    clamp(var(--space-16), 7vw, var(--space-24));
+}
+
+.hero__content {
+  max-width: 48rem;
+}
+
+.hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-block-end: var(--space-6);
+  color: #f2d9a6;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero__eyebrow::before {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background: currentColor;
+  flex: 0 0 auto;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: var(--text-title);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 30%);
+}
+
+.hero__title span {
+  color: #f2d9a6;
+}
+
+.hero__description {
+  max-width: 32rem;
+  margin-block-start: var(--space-6);
+  color: var(--color-on-dark);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-block-start: var(--space-8);
+}
+
+.hero__photo-note {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: var(--space-6);
+  max-width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: var(--radius);
+  background: rgb(32 32 32 / 72%);
+  color: var(--color-on-dark);
+  font-size: 0.75rem;
+}
+
+/* Tablet / smaller desktop:
+   header wraps into more than one row,
+   so hero content starts lower. */
+@media (max-width: 68rem) {
+  .hero__inner {
+    padding-block-start: 11rem;
+  }
+}
+
+
+/* Tablet */
+@media (max-width: 60rem) {
+  .hero__inner {
+    min-height: auto;
+    padding-block-end: var(--space-8);
+  }
+
+  .hero__title {
+    font-size: clamp(2.125rem, 7.5vw, 3.5rem);
+  }
+
+  .hero__description {
+    font-size: var(--text-body);
+  }
+
+  .hero__photo-note {
+    position: static;
+    width: fit-content;
+    margin-block-start: var(--space-12);
+  }
+}
+
+
+/* Phone:
+   navigation currently makes the header taller. */
+@media (max-width: 40rem) {
+  .hero__inner {
+    padding-block-start: 13rem;
+  }
+}
+
+
+/* Small phone */
+@media (max-width: 30rem) {
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+}

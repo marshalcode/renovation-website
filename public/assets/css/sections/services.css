@@ -1,0 +1,156 @@
+.services {
+  padding-block: var(--space-16);
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.services__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-8);
+
+  margin-block-end: var(--space-8);
+}
+
+.services__eyebrow {
+  margin: 0 0 var(--space-2);
+
+  color: var(--color-accent);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.services__title {
+  margin: 0;
+
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.services__all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+
+  flex: 0 0 auto;
+
+  color: var(--color-text);
+
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.services__all-link span {
+  font-size: 1.25rem;
+  transition: transform 160ms ease;
+}
+
+.services__all-link:hover span {
+  transform: translateX(0.25rem);
+}
+
+
+/* Cards */
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.service-card {
+  min-width: 0;
+}
+
+.service-card__image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  border-radius: 0.35rem;
+}
+
+.service-card h3 {
+  margin:
+    var(--space-4)
+    0
+    var(--space-2);
+
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.service-card p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+
+/* Smaller desktop / tablet */
+
+@media (max-width: 68rem) {
+  .services__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 40rem) {
+  .services {
+    padding-block: var(--space-12);
+  }
+
+  .services__header {
+    align-items: start;
+    margin-block-end: var(--space-6);
+  }
+
+  .services__all-link {
+    display: none;
+  }
+
+  .services__list {
+    display: grid;
+    grid-auto-flow: column;
+
+    grid-auto-columns: 82%;
+
+    grid-template-columns: none;
+
+    gap: var(--space-4);
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: none;
+
+    padding-block-end: var(--space-3);
+  }
+
+  .services__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-card {
+    scroll-snap-align: start;
+  }
+
+  .service-card__image {
+    aspect-ratio: 16 / 10;
+  }
+}

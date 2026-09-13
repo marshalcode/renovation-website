@@ -1,0 +1,35 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  fill="none"
+>
+  <path
+    d="M6 39V20L24 8L42 20V39"
+    stroke="#cba65e"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M15 39V25H27V39"
+    stroke="#cba65e"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M32 25H38V31H32Z"
+    stroke="#cba65e"
+    stroke-width="2.4"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M10 39H42"
+    stroke="#cba65e"
+    stroke-width="2.8"
+    stroke-linecap="round"
+  />
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="#cba65e"
+     stroke-width="1.8"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <!-- hammer head -->
+  <path d="M7 5h10"/>
+  <path d="M8 3h8v4H8z"/>
+
+  <!-- handle -->
+  <path d="M12 7v13"/>
+
+  <!-- handle end -->
+  <path d="M10.5 20h3"/>
+
+</svg>

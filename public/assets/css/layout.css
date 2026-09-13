@@ -1,0 +1,41 @@
+.container {
+  width: min(calc(100% - var(--page-gutter) * 2), var(--content-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-12);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.section--compact {
+  padding-block: var(--space-6);
+}
+
+.section--muted {
+  background: var(--color-surface);
+}
+
+.stack > * + * {
+  margin-block-start: var(--space-4);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cluster > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cluster--spread {
+  justify-content: space-between;
+}
+
+.text-width {
+  max-width: var(--text-width);
+}

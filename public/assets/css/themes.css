@@ -1,0 +1,100 @@
+/* =========================
+   NAVY
+   ========================= */
+
+.theme-navy .site-header {
+  background: rgb(16 28 43 / 72%);
+  color: white;
+  border-block-end: 1px solid rgb(16 28 43 / 72%);
+}
+
+.theme-navy .site-name__text > span {
+  color: rgb(255 255 255 / 72%);
+}
+
+.theme-navy .nav-list a {
+  color: rgb(255 255 255 / 82%);
+}
+
+.theme-navy .nav-list a:hover,
+.theme-navy .nav-list a:focus-visible {
+  color: white;
+}
+
+.theme-navy .hero {
+  background: #101c2b;
+}
+
+.theme-navy .hero::before {
+  background: linear-gradient(
+    90deg,
+    rgb(16 28 43 / 96%) 0%,
+    rgb(16 28 43 / 90%) 22%,
+    rgb(16 28 43 / 72%) 42%,
+    rgb(16 28 43 / 38%) 62%,
+    rgb(16 28 43 / 10%) 82%,
+    transparent 100%
+  );
+}
+
+/* =========================
+   NEUTRAL
+   ========================= */
+
+.theme-neutral .site-header {
+  background: rgb(25 25 25 / 55%);
+  color: white;
+  border-block-end: 1px solid rgb(25 25 25 / 55%);
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.theme-neutral .site-name__text > span {
+  color: rgb(255 255 255 / 72%);
+}
+
+.theme-neutral .nav-list a {
+  color: rgb(255 255 255 / 82%);
+}
+
+.theme-neutral .nav-list a:hover,
+.theme-neutral .nav-list a:focus-visible {
+  color: white;
+}
+
+.theme-neutral .hero {
+  background: #181818;
+}
+
+.theme-neutral .hero::before {
+  background: linear-gradient(
+    90deg,
+    rgb(24 24 24 / 92%) 0%,
+    rgb(24 24 24 / 84%) 24%,
+    rgb(24 24 24 / 62%) 45%,
+    rgb(24 24 24 / 30%) 68%,
+    rgb(24 24 24 / 8%) 86%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 60rem) {
+  .theme-navy .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgb(16 28 43 / 94%) 0%,
+      rgb(16 28 43 / 76%) 65%,
+      rgb(16 28 43 / 55%) 100%
+    );
+  }
+
+  .theme-neutral .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgb(24 24 24 / 92%) 0%,
+      rgb(24 24 24 / 74%) 65%,
+      rgb(24 24 24 / 52%) 100%
+    );
+  }
+}
