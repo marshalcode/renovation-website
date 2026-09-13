@@ -55,7 +55,14 @@
   min-height: 24rem;
   padding: var(--space-12);
 
-  background: var(--color-ink);
+  background:
+    linear-gradient(
+      rgb(16 28 43 / 12%),
+      rgb(16 28 43 / 12%)
+    ),
+    url("../../images/about/rhein-main-map.webp")
+    center / cover no-repeat;
+
   color: var(--color-on-dark);
 
   border-radius: 0.35rem;

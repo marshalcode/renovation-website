@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/sections/project-cta.css">
     <link rel="stylesheet" href="assets/css/sections/process.css">
     <link rel="stylesheet" href="assets/css/sections/about.css">
+    <link rel="stylesheet" href="assets/css/sections/request.css">
     <link rel="stylesheet" href="assets/css/sections/footer.css">
     <!-- Theme overrides must come last -->
     <link rel="stylesheet" href="assets/css/themes.css">
@@ -360,18 +361,18 @@
       </a>
 
       <a
-        class="project-cta__phone"
-        href="#"
-        data-site-phone-link
-      >
-        <img
-          class="icon"
-          src="assets/icons/phone.svg"
-          alt=""
-          aria-hidden="true"
+          class="button button--primary site-header__cta"
+          href="#"
+          data-site-phone-link
         >
-        <span data-site="phone"></span>
-      </a>
+          <img
+            class="icon"
+            src="assets/icons/phone.svg"
+            alt=""
+            aria-hidden="true"
+          >
+          <span data-site="phone"></span>
+        </a>
     </div>
 
   </div>
@@ -514,13 +515,162 @@
       </section>
 
       <!-- Request form: interface and submission are added in later steps. -->
-      <section class="section" id="request" aria-labelledby="request-title">
-        <div class="container stack">
-          <h2 id="request-title">Ihr Vorhaben</h2>
-          <p class="text-width">Hier entsteht das Anfrageformular mit der Möglichkeit, optional Fotos hinzuzufügen.</p>
-          <p class="notice text-width">In dieser Vorschau können noch keine Anfragen gesendet werden.</p>
+      <!-- Request form -->
+<section class="request" id="request" aria-labelledby="request-title">
+  <div class="container request__inner">
+
+    <div class="request__intro">
+      <p class="request__eyebrow">JETZT KOSTENLOSES ANGEBOT ANFORDERN</p>
+
+      <h2 class="request__title" id="request-title">
+        Erzählen Sie uns von Ihrem Projekt.
+      </h2>
+
+      <p class="request__description">
+        Ein paar kurze Angaben reichen für den Anfang.
+        Wir melden uns persönlich bei Ihnen zurück.
+      </p>
+
+      <img
+  class="request__image"
+  src="assets/images/request/renovation_request_section.webp"
+  alt=""
+  loading="lazy"
+>
+
+    </div>
+
+    <form class="request-form">
+
+      <div class="request-form__grid">
+
+        <div class="form-field">
+          <label for="name">Name *</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            placeholder="Ihr Name"
+            required
+          >
         </div>
-      </section>
+
+        <div class="form-field">
+          <label for="phone">
+            Telefon 
+            <span class="form-field__optional">optional</span>
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="Ihre Telefonnummer"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="email">E-Mail *</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="Ihre E-Mail-Adresse"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="postal-code">
+            PLZ
+            <span class="form-field__optional">optional</span>
+          </label>
+          <input
+            id="postal-code"
+            name="postalCode"
+            type="text"
+            inputmode="numeric"
+            autocomplete="postal-code"
+            placeholder="z. B. 60311"
+            required
+          >
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="service">Worum geht es?</label>
+
+          <select id="service" name="service">
+            <option value="">Bitte auswählen</option>
+            <option value="painting">Malerarbeiten</option>
+            <option value="plastering">Spachtel- &amp; Putzarbeiten</option>
+            <option value="drywall">Trockenbau &amp; Innenausbau</option>
+            <option value="facade">Fassadenarbeiten</option>
+            <option value="renovation">Renovierung &amp; Sanierung</option>
+            <option value="other">Sonstiges</option>
+          </select>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="message">
+            Erzählen Sie uns kurz von Ihrem Projekt
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Was möchten Sie renovieren oder sanieren?"
+          ></textarea>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="photos">
+            Fotos hinzufügen
+            <span class="form-field__optional">optional</span>
+          </label>
+
+          <input
+            id="photos"
+            name="photos"
+            type="file"
+            accept="image/*"
+            multiple
+          >
+
+          <small>
+            Sie können mehrere Fotos Ihres Projekts auswählen.
+          </small>
+        </div>
+
+      </div>
+
+      <label class="form-check">
+        <input type="checkbox" name="privacy">
+
+        <span>
+          Ich habe die
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+          gelesen.
+        </span>
+      </label>
+
+      <div class="request-form__footer">
+        <button class="button button--primary" type="button">
+          Anfrage senden
+        </button>
+
+        <p>
+          Unverbindlich und kostenlos.
+        </p>
+      </div>
+
+    </form>
+
+  </div>
+</section>
     </main>
 
     <!-- Footer -->
@@ -564,7 +714,7 @@
     <div class="site-footer__column">
       <h2>Schnell zu</h2>
 
-      <a href="#start">Nach oben ↑</a>
+      <a href="#start">Startseite</a>
       <a href="#services">Leistungen</a>
       <a href="#projects">Projekte</a>
       <a href="#about">Über uns</a>
