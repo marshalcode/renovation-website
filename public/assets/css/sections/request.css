@@ -1,7 +1,7 @@
 .request {
-  padding-block: var(--space-16);
+  padding-block: clamp(5rem, 7vw, 7rem);
 
-  background: #d5b574;
+  background: #f3ead7;
   color: var(--color-ink);
 }
 

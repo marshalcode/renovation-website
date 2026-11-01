@@ -1,5 +1,5 @@
 .project-cta {
-  padding-block: var(--space-12);
+  padding-block: clamp(5rem, 7vw, 6.5rem);
   background: var(--color-ink);
   color: var(--color-on-dark);
 }

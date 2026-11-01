@@ -6,6 +6,7 @@
     <meta name="description" content="Seitenentwurf für einen Betrieb für Renovierung und Sanierung.">
     <meta name="robots" content="noindex, nofollow">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/sections/hero.css">
     <link rel="stylesheet" href="assets/css/sections/advantages.css">
     <link rel="stylesheet" href="assets/css/sections/services.css">
+    <link rel="stylesheet" href="assets/css/sections/projects.css">
     <link rel="stylesheet" href="assets/css/sections/project-cta.css">
     <link rel="stylesheet" href="assets/css/sections/process.css">
     <link rel="stylesheet" href="assets/css/sections/about.css">
@@ -338,7 +340,78 @@
       <section class="section section--muted" id="projects" aria-labelledby="projects-title">
         <div class="container stack">
           <h2 id="projects-title">Unsere Projekte</h2>
-          <p class="text-width">Platz für echte Projektfotos und passende Vorher-Nachher-Paare desselben Objekts.</p>
+          <section class="projects__category" aria-labelledby="projects-facades-title">
+            <h3 class="projects__category-title" id="projects-facades-title">Fassadenarbeiten</h3>
+            <div class="projects__grid">
+              <article class="project-card project-card--facade" data-project-name="Fassadensanierung 01">
+                <button
+                  class="project-card__toggle"
+                  type="button"
+                  aria-label="Fassadensanierung 01: Nachher. Vorher ansehen."
+                  disabled
+                >
+                  <span class="project-card__inner">
+                    <span class="project-card__face project-card__face--after" aria-hidden="false">
+                      <img
+                        class="project-card__image project-card__image--after"
+                        src="assets/images/projects/facade-after.webp"
+                        alt="Fassade nach der Sanierung"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                      <span class="project-card__label">Nachher</span>
+                      <span class="project-card__hint">Vorher ansehen <span aria-hidden="true">↻</span></span>
+                    </span>
+                    <span class="project-card__face project-card__face--before" aria-hidden="true">
+                      <img
+                        class="project-card__image project-card__image--before"
+                        src="assets/images/projects/facade-before.webp"
+                        alt="Fassade vor der Sanierung"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                      <span class="project-card__label">Vorher</span>
+                      <span class="project-card__hint">Nachher ansehen <span aria-hidden="true">↻</span></span>
+                    </span>
+                  </span>
+                </button>
+              </article>
+
+              <article class="project-card project-card--facade0" data-project-name="Fassadensanierung 02">
+                <button
+                  class="project-card__toggle"
+                  type="button"
+                  aria-label="Fassadensanierung 02: Nachher. Vorher ansehen."
+                  disabled
+                >
+                  <span class="project-card__inner">
+                    <span class="project-card__face project-card__face--after" aria-hidden="false">
+                      <img
+                        class="project-card__image project-card__image--after"
+                        src="assets/images/projects/facade0-after.webp"
+                        alt="Fassade nach der Sanierung"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                      <span class="project-card__label">Nachher</span>
+                      <span class="project-card__hint">Vorher ansehen <span aria-hidden="true">↻</span></span>
+                    </span>
+                    <span class="project-card__face project-card__face--before" aria-hidden="true">
+                      <img
+                        class="project-card__image project-card__image--before"
+                        src="assets/images/projects/facade0-before.webp"
+                        alt="Fassade vor der Sanierung"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                      <span class="project-card__label">Vorher</span>
+                      <span class="project-card__hint">Nachher ansehen <span aria-hidden="true">↻</span></span>
+                    </span>
+                  </span>
+                </button>
+              </article>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -747,5 +820,6 @@
 
   <script src="assets/js/site-data.js"></script>
   <script src="assets/js/advantages-toggle.js"></script>
+  <script src="assets/js/projects-flip.js"></script>
 </body>
 </html>

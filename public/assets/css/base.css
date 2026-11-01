@@ -15,7 +15,8 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-body);
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
   overflow-wrap: break-word;
 }
 
@@ -26,8 +27,15 @@ p {
 }
 
 h1,
-h2 {
-  line-height: 1.2;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 h1 {
@@ -36,6 +44,14 @@ h1 {
 
 h2 {
   font-size: var(--text-heading);
+}
+
+main > section {
+  padding-block: clamp(5rem, 8vw, 7rem);
+}
+
+main > section + section {
+  margin-block-start: 0;
 }
 
 a {

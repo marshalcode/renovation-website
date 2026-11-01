@@ -1,5 +1,5 @@
 .services {
-  padding-block: var(--space-16);
+  padding-block: clamp(5rem, 7vw, 7rem);
   background: var(--color-background);
   color: var(--color-text);
 }

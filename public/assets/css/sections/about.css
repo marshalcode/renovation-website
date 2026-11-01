@@ -1,6 +1,6 @@
 .about {
-  padding-block: var(--space-16);
-  background: var(--color-surface);
+  padding-block: clamp(5rem, 7vw, 7rem);
+  background: #f9f8f6;
   color: var(--color-text);
 }
 
