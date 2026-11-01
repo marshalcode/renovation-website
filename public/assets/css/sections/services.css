@@ -59,7 +59,7 @@
 
 .services__list {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-6);
 }
 
@@ -164,6 +164,7 @@
   font-size: 0.94rem;
   font-weight: 700;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 .service-card__link span {
@@ -171,13 +172,20 @@
   transition: transform 160ms ease;
 }
 
-.service-card__link:hover,
+/* Keyboard navigation */
 .service-card__link:focus-visible {
   text-decoration: underline;
 }
 
-.service-card__link:hover span {
-  transform: translateX(0.25rem);
+/* Hover effects only for mouse devices */
+@media (hover: hover) and (pointer: fine) {
+  .service-card__link:hover {
+    text-decoration: underline;
+  }
+
+  .service-card__link:hover span {
+    transform: translateX(0.25rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

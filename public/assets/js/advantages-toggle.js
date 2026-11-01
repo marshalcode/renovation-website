@@ -9,6 +9,6 @@ if (toggle && content) {
     content.classList.toggle("is-open", !isOpen);
 
     toggle.querySelector("span:first-child").textContent =
-      isOpen ? "6 Vorteile anzeigen" : "Vorteile ausblenden";
+      isOpen ? "Alle Vorteile anzeigen" : "Vorteile ausblenden";
   });
 }
