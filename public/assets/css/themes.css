@@ -10,8 +10,8 @@ body.theme-stone {
   --theme-muted: #5a6670;
   --theme-border: #d4dde3;
   --theme-ink: #141d26;
-  --theme-accent: #3b6b52;
-  --theme-accent-soft: #a0b9ac;
+  --theme-accent: #2f9b5f;
+  --theme-accent-soft: #9fd0ae;
   --theme-button-text: #ffffff;
   --theme-overlay-strong: rgb(18 27 33 / 84%);
   --theme-overlay-mid: rgb(18 27 33 / 68%);
@@ -26,8 +26,8 @@ body.theme-builder {
   --theme-muted: #56656f;
   --theme-border: #d5dde2;
   --theme-ink: #0e1820;
-  --theme-accent: #3b6b52;
-  --theme-accent-soft: #a7bdb0;
+  --theme-accent: #2f9b5f;
+  --theme-accent-soft: #a7d7b8;
   --theme-button-text: #ffffff;
   --theme-overlay-strong: rgb(13 20 27 / 82%);
   --theme-overlay-mid: rgb(13 20 27 / 68%);
@@ -42,8 +42,8 @@ body.theme-heritage {
   --theme-muted: #5f6a6d;
   --theme-border: #d5d9d3;
   --theme-ink: #1c252a;
-  --theme-accent: #446f5d;
-  --theme-accent-soft: #b2c8bc;
+  --theme-accent: #3d8d63;
+  --theme-accent-soft: #b8d3c0;
   --theme-button-text: #ffffff;
   --theme-overlay-strong: rgb(26 30 35 / 80%);
   --theme-overlay-mid: rgb(26 30 35 / 64%);
@@ -141,8 +141,8 @@ body.theme-heritage .site-header__cta {
 body.theme-stone .button--primary:hover,
 body.theme-builder .button--primary:hover,
 body.theme-heritage .button--primary:hover {
-  background: #274d3b;
-  border-color: #274d3b;
+  background: #1d6d43;
+  border-color: #1d6d43;
   color: #fff;
 }
 
