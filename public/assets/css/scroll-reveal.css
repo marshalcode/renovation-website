@@ -8,6 +8,11 @@
   transform: scale(0.95);
 }
 
+/* Reset offscreen immediately; animate only when the element reappears. */
+.scroll-reveal.scroll-reveal--pending {
+  transition: none;
+}
+
 .scroll-reveal--text.scroll-reveal--pending {
   transform: translateY(14px);
 }

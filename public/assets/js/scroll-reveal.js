@@ -20,14 +20,22 @@
 
   const reveal = (element) => {
     element.classList.remove("scroll-reveal--pending");
-    observer.unobserve(element);
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) reveal(entry.target);
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0 });
+
+  // Reset beyond a small buffer so the translated text cannot flicker at the edge.
+  const resetObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        entry.target.classList.add("scroll-reveal--pending");
+      }
+    });
+  }, { rootMargin: "32px", threshold: 0 });
 
   elements.forEach((element) => {
     // Apply motion to the outer project card, leaving its 3D flip untouched.
@@ -37,16 +45,17 @@
     }
 
     element.addEventListener("focusin", () => {
-      element.classList.remove("scroll-reveal");
       reveal(element);
-    }, { once: true });
+    });
 
     observer.observe(element);
+    resetObserver.observe(element);
   });
 
   reducedMotion.addEventListener("change", (event) => {
     if (!event.matches) return;
     observer.disconnect();
+    resetObserver.disconnect();
     elements.forEach((element) => {
       element.classList.remove("scroll-reveal", "scroll-reveal--pending");
     });
