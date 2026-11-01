@@ -1,0 +1,71 @@
+/* Only JavaScript-enhanced elements receive these classes. */
+.scroll-reveal {
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.scroll-reveal--pending {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.scroll-reveal--text.scroll-reveal--pending {
+  transform: translateY(14px);
+}
+
+@media (min-width: 60rem) {
+  .service-card.scroll-reveal:nth-child(2),
+  .projects__grid > .scroll-reveal:nth-child(2),
+  .advantage-item.scroll-reveal:nth-child(2),
+  .process-step.scroll-reveal:nth-child(2),
+  .about__media.scroll-reveal {
+    transition-delay: 80ms;
+  }
+
+  .service-card.scroll-reveal:nth-child(3),
+  .process-step.scroll-reveal:nth-child(3) {
+    transition-delay: 160ms;
+  }
+
+  .service-card.scroll-reveal:nth-child(4),
+  .process-step.scroll-reveal:nth-child(4) {
+    transition-delay: 240ms;
+  }
+
+  .service-card.scroll-reveal:nth-child(5) {
+    transition-delay: 320ms;
+  }
+}
+
+/* Zoom a separate layer so hover and scroll/flip transforms do not compete.
+   Enlarge the entire project frame to keep contain-fit photos uncropped. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .service-card__image,
+  .project-card__toggle,
+  .request__image,
+  .hero__image {
+    transition: transform 350ms ease;
+  }
+
+  .service-card__image:hover,
+  .project-card__toggle:hover,
+  .request__image:hover,
+  .hero:hover .hero__image {
+    transform: scale(1.03);
+  }
+}
+
+/* Keyboard users must never land on an invisible control. */
+.scroll-reveal.scroll-reveal--pending:focus-within {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.scroll-reveal--pending {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
