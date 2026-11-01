@@ -154,3 +154,32 @@
     aspect-ratio: 16 / 10;
   }
 }
+/* Link to a service detail page. Reuses the site's existing accent colour. */
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-4);
+  color: var(--theme-accent, var(--color-accent));
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.service-card__link span {
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+
+.service-card__link:hover,
+.service-card__link:focus-visible {
+  text-decoration: underline;
+}
+
+.service-card__link:hover span {
+  transform: translateX(0.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card__link span { transition: none; }
+}
